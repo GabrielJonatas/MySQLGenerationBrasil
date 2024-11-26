@@ -50,7 +50,7 @@ SELECT * FROM tb_produtos WHERE preco > 50.00;
 
 SELECT * FROM tb_produtos WHERE preco > 5.00 AND preco < 60.00;
 
-SELECT * FROM tb_produtos WHERE nome_produto LIKE 'C%';
+SELECT * FROM tb_produtos WHERE nome_produto LIKE "C%";
 
 SELECT tb_produtos.id, nome_produto, preco, descricao, dataValidade, tb_categorias.nome_categoria, tb_categorias.tipo
 FROM tb_produtos
@@ -61,4 +61,4 @@ SELECT tb_produtos.id, nome_produto, preco, descricao, dataValidade, tb_categori
 FROM tb_produtos
 INNER JOIN tb_categorias
 ON tb_produtos.categoriasID = tb_categorias.id
-WHERE tb_categorias.tipo = 'Higiene';
+WHERE tb_categorias.tipo = "Higiene";
